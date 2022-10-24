@@ -9,13 +9,17 @@ using UnityEngine;
 
 public class EncryptionManager : MonoBehaviour
 {
-    [SerializeField] private TMP_InputField _plainText;
-    [SerializeField] private TMP_InputField _key;
-    [SerializeField] private TMP_Text _outputText;
+    [SerializeField] private TMP_InputField _textField;
+    private String _key;
     
     public void EncryptMessage()
     {
-        _outputText.text = EncryptString(_key.text, _plainText.text);
+        _textField.text = EncryptString(_key, _textField.text);
+    }
+    
+    public void SetKey(String key)
+    {
+        _key = key;
     }
     
     private string EncryptString(string key, string plainText)  

@@ -10,13 +10,17 @@ using UnityEngine;
 public class DecryptionManager : MonoBehaviour
 {
     
-    [SerializeField] private TMP_InputField _plainText;
-    [SerializeField] private TMP_InputField _key;
-    [SerializeField] private TMP_Text _outputText;
+    [SerializeField] private TMP_InputField _textField;
+    private string _key;
     
     public void DecryptMessage()
     {
-        _outputText.text = DecryptString(_key.text, _plainText.text);
+        _textField.text = DecryptString(_key, _textField.text);
+    }
+
+    public void SetKey(String key)
+    {
+        _key = key;
     }
 
     

@@ -1,35 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
 
     [SerializeField] private GameObject _encryptionScreen;
-
-    [SerializeField] private GameObject _decryptionScreen;
+    
     
     [SerializeField] private GameObject _homeScreen;
+
+    [SerializeField] private TMP_InputField _keyInputField;
+
+    [SerializeField] private EncryptionManager _encryptionManager;
+    [SerializeField] private DecryptionManager _decryptionManager;
     
 
     public void OpenHomeScreen()
     {
         _homeScreen.SetActive(true);
         _encryptionScreen.SetActive(false);
-        _decryptionScreen.SetActive(false);
     }
 
     public void OpenEncryptionWindow()
     {
-        _encryptionScreen.SetActive(true);
-        _decryptionScreen.SetActive(false);
-        _homeScreen.SetActive(false);
-    }
+        if (_keyInputField.text.Length != 0)
+        {
+            _encryptionScreen.SetActive(true);
+            _homeScreen.SetActive(false);
+            _decryptionManager.SetKey(_keyInputField.text);
+            _encryptionManager.SetKey(_keyInputField.text);
+        }
 
-    public void OpenDecryptionWindow()
-    {
-        _encryptionScreen.SetActive(false);
-        _decryptionScreen.SetActive(true);
-        _homeScreen.SetActive(false);
+        
     }
 }
