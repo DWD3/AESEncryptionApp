@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SceneManager : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class SceneManager : MonoBehaviour
     
     [SerializeField] private GameObject _homeScreen;
 
-    [SerializeField] private TMP_InputField _keyInputField;
+    [SerializeField] private InputField _keyInputField;
 
     [SerializeField] private EncryptionManager _encryptionManager;
     [SerializeField] private DecryptionManager _decryptionManager;
@@ -30,7 +31,10 @@ public class SceneManager : MonoBehaviour
             _decryptionManager.SetKey(_keyInputField.text);
             _encryptionManager.SetKey(_keyInputField.text);
         }
+    }
 
-        
+    public void QuitApp()
+    {
+        Application.Quit();
     }
 }

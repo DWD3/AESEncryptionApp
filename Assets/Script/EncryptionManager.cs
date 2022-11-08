@@ -1,15 +1,12 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
-using System.Text;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EncryptionManager : MonoBehaviour
 {
-    [SerializeField] private TMP_InputField _textField;
+    [SerializeField] private InputField _textField;
     private String _key;
     
     public void EncryptMessage()

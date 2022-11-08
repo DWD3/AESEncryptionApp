@@ -1,16 +1,13 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
-using System.Text;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DecryptionManager : MonoBehaviour
 {
     
-    [SerializeField] private TMP_InputField _textField;
+    [SerializeField] private InputField _textField;
     private string _key;
     
     public void DecryptMessage()
