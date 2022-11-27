@@ -400,9 +400,21 @@ PrefabInstance:
       propertyPath: m_Text
       value: "\u8F93\u5165\u6587\u5B57...."
       objectReference: {fileID: 0}
+    - target: {fileID: 7188612113146273529, guid: c30a6fde2bb1d4e479b1a9fc9d755cc6, type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7188612113526922768, guid: c30a6fde2bb1d4e479b1a9fc9d755cc6, type: 3}
+      propertyPath: m_LineType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7188612113526922770, guid: c30a6fde2bb1d4e479b1a9fc9d755cc6, type: 3}
       propertyPath: m_Name
       value: InputField
+      objectReference: {fileID: 0}
+    - target: {fileID: 7188612113526922770, guid: c30a6fde2bb1d4e479b1a9fc9d755cc6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7188612113526922771, guid: c30a6fde2bb1d4e479b1a9fc9d755cc6, type: 3}
       propertyPath: m_Pivot.x
